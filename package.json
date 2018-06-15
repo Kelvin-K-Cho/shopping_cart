@@ -1,5 +1,50 @@
 {
-  "name": "shopping_cart",
-  "private": true,
-  "dependencies": {}
+	"name": "shopping_cart",
+	"private": true,
+	"dependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.2.3",
+		"babel-loader": "^7.1.4",
+		"babel-plugin-syntax-dynamic-import": "^6.18.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-react": "^6.24.1",
+		"emotion": "^9.1.1",
+		"eslint": "^4.19.1",
+		"html-sanitize": "^1.1.5",
+		"lodash": "^4.17.5",
+		"react": "^16.3.0",
+		"react-dom": "^16.3.0",
+		"react-loadable": "^5.4.0",
+		"react-markdown": "^3.3.2",
+		"react-redux": "^5.0.7",
+		"react-router-dom": "^4.2.2",
+		"reactstrap": "^5.0.0-beta.3",
+		"redux": "^3.7.2",
+		"redux-thunk": "^2.2.0",
+		"uglifyjs-webpack-plugin": "^1.2.5",
+		"webpack": "^4.8.3",
+		"webpack-cli": "^2.1.3"
+	},
+	"description": "This README would normally document whatever steps are necessary to get the application up and running.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Kelvin-K-Cho/shopping_cart.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Kelvin-K-Cho/shopping_cart/issues"
+	},
+	"homepage": "https://github.com/Kelvin-K-Cho/shopping_cart#readme"
 }
