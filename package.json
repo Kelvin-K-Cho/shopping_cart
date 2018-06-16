@@ -35,6 +35,9 @@
 			"transform-object-rest-spread"
 		]
 	},
+	"eslintConfig": {
+		"parser": "babel-eslint"
+	},
 	"main": "index.js",
 	"directories": {
 		"lib": "lib",
