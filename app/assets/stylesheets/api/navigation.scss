@@ -1,0 +1,54 @@
+header {
+	width: 100vw;
+	position: fixed;
+}
+
+.navbar {
+	height: 6vh;
+	background-color: $primary_color;
+	padding: 0.5vh 1vw;
+
+	img {
+		height: 4vh;
+		padding: 8%;
+		filter: invert(100%);
+	}
+
+	img:hover {
+		filter: invert(0);
+	}
+
+	.nav-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	#left-nav-container {
+		width: 12vw;
+		min-width: 230px;
+	}
+
+	.btn-secondary {
+		background-color: inherit;
+		color: $secondary_color;
+		border-color: $secondary_color;
+	}
+
+	.btn-secondary:hover {
+		background-color: $quaternary_color;
+	}
+
+	button:active {
+		background-color: white;
+	}
+}
+
+.btn {
+	color: $secondary_color;
+	border-color: $secondary_color;
+}
+
+.btn:hover {
+	background-color: $quaternary_color;
+}

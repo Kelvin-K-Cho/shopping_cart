@@ -1,0 +1,47 @@
+$primary_color: #ff3850;
+$secondary_color: #f4f4ef;
+$tertiary_color: #acbebe;
+$quaternary_color: #20232a;
+
+#app {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	height: 100vh;
+	overflow: auto;
+	background-color: $secondary_color;
+	font-family: 'Nunito';
+}
+
+.main {
+	margin-top: 26vh;
+	margin-left: 4vw;
+	margin-right: 4vw;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	color: $quaternary_color;
+
+	h1 {
+		font-size: 350%;
+		font-weight: 650;
+	}
+
+	h2 {
+		margin-top: 1.5%;
+		font-size: 200%;
+		font-weight: 450;
+	}
+}
+
+.title {
+	margin: 1% 0;
+	font-family: 'Jua';
+	font-size: 300%;
+}
+
+footer {
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+}
