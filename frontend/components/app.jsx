@@ -8,6 +8,10 @@ const NavigationContainer = Wrapper({
 	loader: () => import('./navigation/navigation_container')
 });
 
+const ProgressContainer = Wrapper({
+	loader: () => import('./progress/progress_container')
+});
+
 const Home = Wrapper({
 	loader: () => import('./home/home')
 });
@@ -24,7 +28,9 @@ Loadable.preloadAll();
 
 const App = () => (
 	<div id="app">
-		<header />
+		<header>
+			<Route path="/" component={ProgressContainer} />
+		</header>
 		<Switch>
 			<Route exact path="/" component={Home} />
 			<AuthRoute path="/signup" component={SignupContainer} />
