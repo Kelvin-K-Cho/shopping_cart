@@ -1,0 +1,27 @@
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 2px solid $quaternary_color;
+	border-radius: 5px;
+	height: 30vh;
+	width: 18vw;
+	min-height: 300px;
+	min-width: 320px;
+	margin: auto;
+	margin-top: 1%;
+
+	form {
+		margin-bottom: 6%;
+	}
+
+	.form-group {
+		margin-top: 4%;
+	}
+
+	.form-buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
