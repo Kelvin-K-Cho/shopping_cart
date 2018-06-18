@@ -24,16 +24,16 @@ Loadable.preloadAll();
 
 const App = () => (
 	<div id="app">
-		<header>
-			<Route path="/" component={NavigationContainer} />
-		</header>
+		<header />
 		<Switch>
 			<Route exact path="/" component={Home} />
 			<AuthRoute path="/signup" component={SignupContainer} />
 			<AuthRoute path="/login" component={LoginContainer} />
 			<Redirect to="/" />
 		</Switch>
-		<footer />
+		<footer>
+			<Route path="/" component={NavigationContainer} />
+		</footer>
 	</div>
 );
 
