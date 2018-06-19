@@ -5,7 +5,7 @@ const ShopsReducer = (oldState = {}, action) => {
 	Object.freeze(oldState);
 	switch (action.type) {
 		case RECEIVE_ALL_SHOPS:
-			return merge({}, action.suggestions);
+			return merge({}, action.shops);
 		case RECEIVE_SHOP:
 			return merge({}, oldState, {
 				[action.shop.id]: action.shop
