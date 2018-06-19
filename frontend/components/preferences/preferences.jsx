@@ -8,6 +8,7 @@ class Preferences extends React.Component {
 	render() {
 		const { shops } = this.props;
 		const title = <div className="preferences-title">Preferences</div>;
+		return <div>{title}</div>;
 	}
 }
 

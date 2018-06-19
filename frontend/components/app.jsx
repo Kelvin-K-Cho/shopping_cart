@@ -24,6 +24,10 @@ const LoginContainer = Wrapper({
 	loader: () => import('./session/login_container')
 });
 
+const PreferencesContainer = Wrapper({
+	loader: () => import('./preferences/preferences_container')
+});
+
 Loadable.preloadAll();
 
 const App = () => (
@@ -35,6 +39,11 @@ const App = () => (
 			<Route exact path="/" component={Home} />
 			<AuthRoute path="/signup" component={SignupContainer} />
 			<AuthRoute path="/login" component={LoginContainer} />
+			<ProtectedRoute
+				exact
+				path="/preferences"
+				component={PreferencesContainer}
+			/>
 			<Redirect to="/" />
 		</Switch>
 		<footer>
