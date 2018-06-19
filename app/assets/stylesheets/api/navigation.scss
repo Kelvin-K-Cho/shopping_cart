@@ -4,6 +4,8 @@ header {
 }
 
 .navbar {
+	display: flex;
+	flex-direction: row-reverse;
 	height: 6vh;
 	background-color: $primary_color;
 	padding: 0.5vh 1vw;

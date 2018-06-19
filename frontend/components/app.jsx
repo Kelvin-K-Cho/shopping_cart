@@ -32,9 +32,7 @@ Loadable.preloadAll();
 
 const App = () => (
 	<div id="app">
-		<header>
-			<Route path="/" component={ProgressContainer} />
-		</header>
+		<header />
 		<Switch>
 			<Route exact path="/" component={Home} />
 			<AuthRoute path="/signup" component={SignupContainer} />
