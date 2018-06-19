@@ -43,7 +43,7 @@ class Api::ShopsController < ApplicationController
   private
 
   def shop_params
-    params.require(:shop).permit(:name, :type, :state, :city)
+    params.require(:shop).permit(:name, :category, :state, :city)
   end
 
 end

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2018_06_18_195737) do
 
   create_table "shops", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type"
+    t.string "category"
     t.string "state"
     t.string "city"
     t.integer "user_id", null: false
