@@ -8,11 +8,20 @@ class Preferences extends React.Component {
 
 	render() {
 		const { shops } = this.props;
-		console.log(this.props);
-		let shop;
+		let shopId;
+		for (let i = 0; i < shops.length; i++) {
+			if (shops[i].user_id === currentUser.id) {
+				shopId = shops[i].id;
+				break;
+			}
+		}
 		const title = <div className="preferences-title">Choose Your Portal</div>;
 		let vendor;
-		vendor = <Link to="vendor/shop">Vendor</Link>;
+		if (shopId) {
+			vendor = <Link to={`/vendor/shop/${shopId}`}>Vendor</Link>;
+		} else {
+			vendor = <Link to="/vendor/shop/new">Vendor</Link>;
+		}
 		return (
 			<div>
 				{title}

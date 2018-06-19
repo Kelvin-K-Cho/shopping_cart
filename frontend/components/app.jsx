@@ -28,6 +28,10 @@ const PreferencesContainer = Wrapper({
 	loader: () => import('./preferences/preferences_container')
 });
 
+const ShopFormContainer = Wrapper({
+	loader: () => import('./shop/shop_form_container')
+});
+
 Loadable.preloadAll();
 
 const App = () => (
@@ -41,6 +45,16 @@ const App = () => (
 				exact
 				path="/preferences"
 				component={PreferencesContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/shop/:shopId"
+				component={ShopFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/shop/new"
+				component={ShopFormContainer}
 			/>
 			<Redirect to="/" />
 		</Switch>
