@@ -4,7 +4,7 @@
 #
 #  id         :bigint(8)        not null, primary key
 #  name       :string           not null
-#  type       :string
+#  category   :string
 #  state      :string
 #  city       :string
 #  user_id    :integer          not null

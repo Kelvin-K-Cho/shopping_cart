@@ -15,7 +15,10 @@ class ShopForm extends React.Component {
 	}
 
 	componentDidMount() {
-		if (this.props.match.params.shopId) {
+		if (
+			this.props.match.params.shopId &&
+			this.props.match.params.shopId !== 'new'
+		) {
 			this.props.fetchShop(this.props.match.params.shopId);
 		}
 	}
@@ -37,11 +40,11 @@ class ShopForm extends React.Component {
 		this.props
 			.action(this.state)
 			.then(() => this.props.history.push('/preferences/'));
-		// .then(() => this.props.history.push('/vendor/stock'));
+		// .then(() => this.props.history.push('/vendor/listings/'));
 	}
 
 	render() {
-		let title = <div>Shop Preferences</div>;
+		let title = <h1>Shop Preferences</h1>;
 		let name = (
 			<label>
 				Shop Name
