@@ -20,13 +20,13 @@ const removeShop = shop => ({
 });
 
 const fetchShops = () => dispatch =>
-	ShopAPIUtil.fetchShops().then(shops => {
-		dispatch(receiveAllShops(shops));
+	ShopAPIUtil.fetchShops().then(payload => {
+		dispatch(receiveAllShops(payload));
 	});
 
 const fetchShop = id => dispatch =>
-	ShopAPIUtil.fetchShop(id).then(shop => {
-		dispatch(receiveShop(shop[id]));
+	ShopAPIUtil.fetchShop(id).then(payload => {
+		dispatch(receiveShop(payload[id]));
 	});
 
 const createShop = shop => dispatch =>
@@ -41,7 +41,7 @@ const updateShop = shop => dispatch =>
 
 const deleteShop = shop => dispatch =>
 	ShopAPIUtil.destroyShop(shop).then(payload => {
-		dispatch(removeShop(shop));
+		dispatch(removeShop(payload));
 	});
 
 export {
