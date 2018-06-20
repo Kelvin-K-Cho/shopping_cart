@@ -32,6 +32,10 @@ const ShopFormContainer = Wrapper({
 	loader: () => import('./shop/shop_form_container')
 });
 
+const ListingFormContainer = Wrapper({
+	loader: () => import('./listing/listing_form_container')
+});
+
 Loadable.preloadAll();
 
 const App = () => (
@@ -55,6 +59,16 @@ const App = () => (
 				exact
 				path="/vendor/shop/new"
 				component={ShopFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/listing/:listingId"
+				component={ListingFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/listing/new"
+				component={ListingFormContainer}
 			/>
 			<Redirect to="/" />
 		</Switch>

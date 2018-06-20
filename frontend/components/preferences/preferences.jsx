@@ -10,7 +10,7 @@ class Preferences extends React.Component {
 		const { shops } = this.props;
 		let shopId;
 		for (let i = 0; i < shops.length; i++) {
-			if (shops[i].user_id === window.currentUser.id) {
+			if (shops[i].user_id === currentUser.id) {
 				shopId = shops[i].id;
 				break;
 			}

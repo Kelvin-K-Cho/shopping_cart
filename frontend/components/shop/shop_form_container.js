@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import ShopForm from './shop_form';
 import { fetchShop, createShop, updateShop } from '../../actions/shops';
+import { fetchListings } from '../../actions/listings';
+import { selectListings } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
 	let shop;
@@ -13,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 	}
 	return {
 		shop,
-		formType
+		formType,
+		listings: selectListings(state)
 	};
 };
 
@@ -26,7 +29,8 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
 	}
 	return {
 		fetchShop: id => dispatch(fetchShop(id)),
-		action: shop => dispatch(action(shop))
+		action: shop => dispatch(action(shop)),
+		fetchListings: () => dispatch(fetchListings())
 	};
 };
 

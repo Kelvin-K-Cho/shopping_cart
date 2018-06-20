@@ -4,7 +4,7 @@ Listing.create(
   title: "Roses",
   category: "Bouquet",
   description: "Red Flowers",
-  tags: ['flowers'],
+  tags: 'flowers, celebration',
   price: 9.99,
   shipping: 2.99,
   time: "2 days",

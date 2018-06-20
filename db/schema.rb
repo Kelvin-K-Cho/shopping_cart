@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_06_19_225530) do
     t.string "title"
     t.string "category"
     t.text "description"
-    t.string "tags", default: [], array: true
+    t.string "tags"
     t.float "price"
     t.float "shipping"
     t.string "time"

@@ -21,6 +21,7 @@ class ShopForm extends React.Component {
 		) {
 			this.props.fetchShop(this.props.match.params.shopId);
 		}
+		this.props.fetchListings();
 	}
 
 	componentWillReceiveProps(newProps) {
@@ -37,9 +38,26 @@ class ShopForm extends React.Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		this.props
-			.action(this.state)
-			.then(() => this.props.history.push('/preferences/'));
+		const { listings } = this.props;
+		let listingId;
+		for (let i = 0; i < listings.length; i++) {
+			if (listings[i].user_id === currentUser.id) {
+				listingId = listings[i].id;
+				break;
+			}
+		}
+		if (listingId) {
+			this.props
+				.action(this.state)
+				.then(() => this.props.history.push(`/vendor/listing/${listingId}`));
+		} else {
+			this.props
+				.action(this.state)
+				.then(() => this.props.history.push(`/vendor/listing/new`));
+		}
+		// this.props
+		// 	.action(this.state)
+		// 	.then(() => this.props.history.push('/preferences/'));
 		// .then(() => this.props.history.push('/vendor/listings/'));
 	}
 

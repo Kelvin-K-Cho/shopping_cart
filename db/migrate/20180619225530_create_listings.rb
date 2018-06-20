@@ -4,7 +4,7 @@ class CreateListings < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :category
       t.text :description
-      t.string :tags, array: true, default: []
+      t.string :tags
       t.float :price
       t.float :shipping
       t.string :time
