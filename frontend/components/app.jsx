@@ -58,7 +58,9 @@ import NotificationFormContainer from './notification/notification_form_containe
 
 const App = () => (
 	<div id="app">
-		<header />
+		<header>
+			<Route path="/" component={ProgressContainer} />
+		</header>
 		<Switch>
 			<Route exact path="/" component={Home} />
 			<AuthRoute path="/signup" component={SignupContainer} />

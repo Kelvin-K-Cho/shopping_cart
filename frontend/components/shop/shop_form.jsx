@@ -105,7 +105,7 @@ class ShopForm extends React.Component {
 		);
 
 		return (
-			<div className="shop-container">
+			<div className="main">
 				{title}
 				<form onSubmit={this.handleSubmit} className="shop-form">
 					{name}

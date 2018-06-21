@@ -24,7 +24,7 @@ class Preferences extends React.Component {
 			vendor = <Link to="/vendor/shop/new">Vendor</Link>;
 		}
 		return (
-			<div>
+			<div className="main">
 				{title}
 				{vendor}
 			</div>

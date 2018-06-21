@@ -75,7 +75,7 @@ class NotificationForm extends React.Component {
 		);
 
 		return (
-			<div className="notification-container">
+			<div className="main">
 				{header}
 				<form onSubmit={this.handleSubmit} className="notification-form">
 					{option}

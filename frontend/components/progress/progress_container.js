@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Progress from './progress';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
 	path: ownProps.location.pathname
 });
 

@@ -186,7 +186,7 @@ class ListingForm extends React.Component {
 		);
 
 		return (
-			<div className="listing-container">
+			<div className="main">
 				{header}
 				{information}
 				<form onSubmit={this.handleSubmit} className="listing-form">

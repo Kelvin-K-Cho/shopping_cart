@@ -193,7 +193,7 @@ class GatewayForm extends React.Component {
 			</label>
 		);
 		return (
-			<div className="gateway-container">
+			<div className="main">
 				{header}
 				<form onSubmit={this.handleSubmit} className="gateway-form">
 					{location}
