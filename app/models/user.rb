@@ -30,6 +30,16 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Listing
 
+ has_many :gateways,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Gateway
+
+ has_many :notifications,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Notification
+
  def self.find_by_credentials(username, password)
    user = User.find_by(username: username)
    user && user.is_password?(password) ? user : nil

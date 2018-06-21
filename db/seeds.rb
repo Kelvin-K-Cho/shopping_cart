@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Shop.destroy_all
+Listing.destroy_all
+Gateway.destroy_all
 
 Dir[File.join(Rails.root, 'db', 'seeds/*')].sort.each do |seed|
   load seed

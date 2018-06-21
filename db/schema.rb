@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_225530) do
+ActiveRecord::Schema.define(version: 2018_06_20_235454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "gateways", force: :cascade do |t|
+    t.string "location"
+    t.string "full_name"
+    t.string "account_type"
+    t.string "routing_number"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "birthdate"
+    t.string "ssn"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "postal_code"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_gateways_on_created_at"
+    t.index ["updated_at"], name: "index_gateways_on_updated_at"
+    t.index ["user_id"], name: "index_gateways_on_user_id"
+  end
 
   create_table "listings", force: :cascade do |t|
     t.string "title"
@@ -33,6 +54,18 @@ ActiveRecord::Schema.define(version: 2018_06_19_225530) do
     t.index ["created_at"], name: "index_listings_on_created_at"
     t.index ["updated_at"], name: "index_listings_on_updated_at"
     t.index ["user_id"], name: "index_listings_on_user_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "option"
+    t.string "info"
+    t.string "time"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_notifications_on_created_at"
+    t.index ["updated_at"], name: "index_notifications_on_updated_at"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "shops", force: :cascade do |t|

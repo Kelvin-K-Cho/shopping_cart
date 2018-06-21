@@ -5,6 +5,8 @@ import {
 	createListing,
 	updateListing
 } from '../../actions/listings';
+import { fetchGateways } from '../../actions/gateways';
+import { selectGateways } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
 	let listing;
@@ -17,7 +19,8 @@ const mapStateToProps = (state, ownProps) => {
 	}
 	return {
 		listing,
-		formType
+		formType,
+		gateways: selectGateways(state)
 	};
 };
 
@@ -30,7 +33,8 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
 	}
 	return {
 		fetchListing: id => dispatch(fetchListing(id)),
-		action: listing => dispatch(action(listing))
+		action: listing => dispatch(action(listing)),
+		fetchGateways: () => dispatch(fetchGateways())
 	};
 };
 

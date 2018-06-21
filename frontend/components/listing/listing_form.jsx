@@ -28,6 +28,7 @@ class ListingForm extends React.Component {
 		) {
 			this.props.fetchListing(this.props.match.params.listingId);
 		}
+		this.props.fetchGateways();
 	}
 
 	componentWillReceiveProps(newProps) {
@@ -44,13 +45,29 @@ class ListingForm extends React.Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		this.props
-			.action(this.state)
-			.then(() => this.props.history.push('/preferences/'));
+		const { gateways } = this.props;
+		let gatewayId;
+		for (let i = 0; i < gateways.length; i++) {
+			if (gateways[i].user_id === currentUser.id) {
+				gatewayId = gateways[i].id;
+				break;
+			}
+		}
+		if (gatewayId) {
+			this.props
+				.action(this.state)
+				.then(() => this.props.history.push(`/vendor/gateway/${gatewayId}`));
+		} else {
+			this.props
+				.action(this.state)
+				.then(() => this.props.history.push(`/vendor/gateway/new`));
+		}
+		// this.props
+		// 	.action(this.state)
+		// 	.then(() => this.props.history.push('/preferences/'));
 	}
 
 	render() {
-		console.log(this.state);
 		let header = <h1>Stock your shop</h1>;
 		let information = (
 			<section>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :shops, except: [:new, :edit]
     resources :listings, except: [:new, :edit]
+    resources :gateways, except: [:new, :edit]
+    resources :notifications, except: [:new, :edit]
   end
 
   root "static_pages#root"

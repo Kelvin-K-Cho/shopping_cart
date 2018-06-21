@@ -36,6 +36,14 @@ const ListingFormContainer = Wrapper({
 	loader: () => import('./listing/listing_form_container')
 });
 
+const GatewayFormContainer = Wrapper({
+	loader: () => import('./gateway/gateway_form_container')
+});
+
+const NotificationFormContainer = Wrapper({
+	loader: () => import('./notification/notification_form_container')
+});
+
 Loadable.preloadAll();
 
 const App = () => (
@@ -69,6 +77,26 @@ const App = () => (
 				exact
 				path="/vendor/listing/new"
 				component={ListingFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/gateway/:gatewayId"
+				component={GatewayFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/gateway/new"
+				component={GatewayFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/notification/:notificationId"
+				component={NotificationFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/vendor/notification/new"
+				component={NotificationFormContainer}
 			/>
 			<Redirect to="/" />
 		</Switch>

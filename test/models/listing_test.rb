@@ -6,7 +6,7 @@
 #  title       :string
 #  category    :string
 #  description :text
-#  tags        :string           default([]), is an Array
+#  tags        :string
 #  price       :float
 #  shipping    :float
 #  time        :string
