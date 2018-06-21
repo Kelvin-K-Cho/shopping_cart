@@ -68,7 +68,7 @@ class NotificationForm extends React.Component {
 				What time each day woud you like to be notified of purchases
 				<input
 					type="text"
-					value={this.state.info}
+					value={this.state.time}
 					onChange={this.updateForm('time')}
 				/>
 			</label>
