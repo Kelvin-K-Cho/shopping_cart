@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Loader from '../loader/loader';
 
 class Preferences extends React.Component {
 	componentDidMount() {

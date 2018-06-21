@@ -4,7 +4,8 @@ import { fetchShops } from '../../actions/shops';
 import { selectShops } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-	shops: selectShops(state)
+	shops: selectShops(state),
+	currentUser: state.session.currentUser
 });
 
 const mapDispatchtoProps = dispatch => ({

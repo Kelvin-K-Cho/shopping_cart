@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
-// import Progress from './progress';
+import Progress from './progress';
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+	path: ownProps.location.pathname
+});
 
 const mapDispatchToProps = dispatch => ({});
 
 const ProgressContainer = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(/*Progress*/);
+)(Progress);
 
 export default ProgressContainer;
