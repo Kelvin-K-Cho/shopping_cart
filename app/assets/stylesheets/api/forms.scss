@@ -56,7 +56,7 @@
 	}
 
 	.listing-box {
-		margin-top: 20px;
+		margin-top: 4.5vh;
 		height: 40vh;
 		display: flex;
 		flex-direction: row;
@@ -118,5 +118,60 @@
 
 	input[type='submit'] {
 		margin-left: 28vw;
+	}
+}
+
+.sync-form {
+	.sync-box {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+	}
+
+	.flexform {
+		margin: 2vh 3vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.labels {
+		margin: 15px;
+	}
+
+	textarea {
+		height: 400px;
+		width: 400px;
+	}
+
+	input[type='submit'] {
+		margin-top: 50px;
+	}
+}
+
+.profile-form {
+	.profile-box {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+	}
+
+	.flexform {
+		margin: 2vh 3vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.react-calendar {
+		width: 20vw;
+	}
+
+	input[type='submit'] {
+		margin-top: 10vh;
 	}
 }

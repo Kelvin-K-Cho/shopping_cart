@@ -20,25 +20,30 @@ class User < ApplicationRecord
 
  after_initialize :ensure_session_token
 
- has_many :shops,
-  primary_key: :id,
-  foreign_key: :user_id,
-  class_name: :Shop
+  has_many :shops,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Shop
 
- has_many :listings,
-  primary_key: :id,
-  foreign_key: :user_id,
-  class_name: :Listing
+  has_many :listings,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Listing
 
- has_many :gateways,
-  primary_key: :id,
-  foreign_key: :user_id,
-  class_name: :Gateway
+  has_many :gateways,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Gateway
 
- has_many :notifications,
-  primary_key: :id,
-  foreign_key: :user_id,
-  class_name: :Notification
+  has_many :notifications,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Notification
+
+  has_many :profiles,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Profile
 
  def self.find_by_credentials(username, password)
    user = User.find_by(username: username)

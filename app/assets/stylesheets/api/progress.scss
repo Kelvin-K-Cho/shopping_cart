@@ -146,6 +146,14 @@ ul.checkout-bar {
 				z-index: 99999;
 			}
 		}
+		&.active3 {
+			color: #8bc53f;
+			// font-weight: bold;
+			&:before {
+				background: #8bc53f;
+				z-index: 99999;
+			}
+		}
 		&.visited {
 			background: #ececec;
 			color: #57aed1;
@@ -221,6 +229,19 @@ ul.checkout-bar {
 		z-index: 0;
 		border-radius: 15px;
 	}
+	.checkout-bar li.active3:after {
+		-webkit-animation: myanimation 3s 0;
+		@include green-stripe;
+		@include inner-shadow;
+		content: '';
+		height: 15px;
+		width: 163%;
+		left: 50%;
+		position: absolute;
+		top: -50px;
+		z-index: 0;
+		border-radius: 15px;
+	}
 	.checkout-wrap {
 		margin: 80px auto;
 	}
@@ -272,6 +293,11 @@ ul.checkout-bar {
 					z-index: 99;
 				}
 			}
+		}
+	}
+	#customer {
+		&:before {
+			width: 30%;
 		}
 	}
 }

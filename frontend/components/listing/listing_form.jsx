@@ -118,7 +118,7 @@ class ListingForm extends React.Component {
 		);
 		let price = (
 			<label>
-				Price:&nbsp;
+				Price:&nbsp; $
 				<input
 					type="number"
 					value={this.state.price}
@@ -128,7 +128,7 @@ class ListingForm extends React.Component {
 		);
 		let shipping = (
 			<label>
-				Shipping Cost:&nbsp;
+				Shipping Cost:&nbsp; $
 				<input
 					type="number"
 					value={this.state.shipping}

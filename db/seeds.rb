@@ -10,6 +10,8 @@ User.destroy_all
 Shop.destroy_all
 Listing.destroy_all
 Gateway.destroy_all
+Notification.destroy_all
+Profile.destroy_all
 
 Dir[File.join(Rails.root, 'db', 'seeds/*')].sort.each do |seed|
   load seed

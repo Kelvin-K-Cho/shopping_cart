@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :listings, except: [:new, :edit]
     resources :gateways, except: [:new, :edit]
     resources :notifications, except: [:new, :edit]
+    resources :profiles, except: [:new, :edit]
+
   end
 
   root "static_pages#root"

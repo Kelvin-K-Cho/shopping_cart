@@ -4,7 +4,8 @@ class Progress extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			vendor: ['shop', 'listing', 'gateway', 'notification']
+			vendor: ['shop', 'listing', 'gateway', 'notification'],
+			customer: ['payment', 'photos', 'profile']
 		};
 	}
 
@@ -18,6 +19,16 @@ class Progress extends React.Component {
 		}
 
 		let index = this.state.vendor.indexOf(place);
+
+		let position = this.props.path.slice(10);
+
+		for (let i = 0; i < position.length; i++) {
+			if (position[i] === '/') {
+				position = position.slice(0, i);
+			}
+		}
+
+		let element = this.state.customer.indexOf(position);
 
 		let emptyPortal = <div />;
 		let vendorPortal = (
@@ -42,10 +53,32 @@ class Progress extends React.Component {
 			</div>
 		);
 
-		if (index === -1) {
-			return emptyPortal;
-		} else {
+		let customerPortal = (
+			<div className="checkout-wrap">
+				<ul className="checkout-bar" id="customer">
+					<li
+						className={element === 0 ? 'active' : element > 0 ? 'visited' : ''}
+					>
+						Billing/Payment
+					</li>
+
+					<li
+						className={element === 1 ? 'active' : element > 1 ? 'visited' : ''}
+					>
+						Your Photos
+					</li>
+
+					<li className={element === 2 ? 'active3' : ''}>Your Profile</li>
+				</ul>
+			</div>
+		);
+
+		if (index > -1) {
 			return vendorPortal;
+		} else if (element > -1) {
+			return customerPortal;
+		} else {
+			return emptyPortal;
 		}
 	}
 }

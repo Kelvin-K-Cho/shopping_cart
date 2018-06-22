@@ -12,7 +12,10 @@ import PreferencesContainer from './preferences/preferences_container';
 import ShopFormContainer from './shop/shop_form_container';
 import ListingFormContainer from './listing/listing_form_container';
 import GatewayFormContainer from './gateway/gateway_form_container';
+import PaymentFormContainer from './gateway/payment_form_container';
 import NotificationFormContainer from './notification/notification_form_container';
+import SyncContainer from './photo/sync_container';
+import ProfileContainer from './profile/profile_container';
 
 // const NavigationContainer = Wrapper({
 // 	loader: () => import('./navigation/navigation_container')
@@ -109,6 +112,31 @@ const App = () => (
 				exact
 				path="/vendor/notification/new"
 				component={NotificationFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/customer/payment/:paymentId"
+				component={PaymentFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/customer/payment/new"
+				component={PaymentFormContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/customer/photos/"
+				component={SyncContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/customer/profile/:profileId"
+				component={ProfileContainer}
+			/>
+			<ProtectedRoute
+				exact
+				path="/customer/profile/new"
+				component={ProfileContainer}
 			/>
 			<Redirect to="/" />
 		</Switch>
