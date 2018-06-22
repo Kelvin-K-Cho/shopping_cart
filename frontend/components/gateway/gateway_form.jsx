@@ -74,7 +74,7 @@ class GatewayForm extends React.Component {
 		let header = <h1>Gateway Payment</h1>;
 		let location = (
 			<label>
-				Bank Location:
+				Bank Location:&nbsp;
 				<input
 					type="text"
 					value={this.state.location}
@@ -84,7 +84,7 @@ class GatewayForm extends React.Component {
 		);
 		let full_name = (
 			<label>
-				Full Name on Account:
+				Full Name on Account:&nbsp;
 				<input
 					type="text"
 					value={this.state.full_name}
@@ -94,7 +94,7 @@ class GatewayForm extends React.Component {
 		);
 		let account_type = (
 			<label>
-				Account Type
+				Account Type:&nbsp;
 				<input
 					type="text"
 					value={this.state.account_type}
@@ -104,7 +104,7 @@ class GatewayForm extends React.Component {
 		);
 		let routing_number = (
 			<label>
-				Routing Number
+				Routing Number:&nbsp;
 				<input
 					type="text"
 					value={this.state.routing_number}
@@ -114,7 +114,7 @@ class GatewayForm extends React.Component {
 		);
 		let first_name = (
 			<label>
-				First Name:
+				First Name:&nbsp;
 				<input
 					type="text"
 					value={this.state.first_name}
@@ -124,7 +124,7 @@ class GatewayForm extends React.Component {
 		);
 		let last_name = (
 			<label>
-				Last Name:
+				Last Name:&nbsp;
 				<input
 					type="text"
 					value={this.state.last_name}
@@ -134,7 +134,7 @@ class GatewayForm extends React.Component {
 		);
 		let birthdate = (
 			<label>
-				DOB:
+				DOB:&nbsp;
 				<input
 					type="text"
 					value={this.state.birthdate}
@@ -144,7 +144,7 @@ class GatewayForm extends React.Component {
 		);
 		let ssn = (
 			<label>
-				Last 4 of SSN:
+				Last 4 of SSN:&nbsp;
 				<input
 					type="text"
 					value={this.state.ssn}
@@ -154,7 +154,7 @@ class GatewayForm extends React.Component {
 		);
 		let address = (
 			<label>
-				Address:
+				Address:&nbsp;
 				<input
 					type="text"
 					value={this.state.address}
@@ -164,7 +164,7 @@ class GatewayForm extends React.Component {
 		);
 		let city = (
 			<label>
-				City:
+				City:&nbsp;
 				<input
 					type="text"
 					value={this.state.city}
@@ -174,7 +174,7 @@ class GatewayForm extends React.Component {
 		);
 		let territory = (
 			<label>
-				State:
+				State:&nbsp;
 				<input
 					type="text"
 					value={this.state.state}
@@ -184,7 +184,7 @@ class GatewayForm extends React.Component {
 		);
 		let postal_code = (
 			<label>
-				Zip/Postal Code:
+				Zip/Postal Code:&nbsp;
 				<input
 					type="text"
 					value={this.state.postal_code}
@@ -196,18 +196,24 @@ class GatewayForm extends React.Component {
 			<div className="main">
 				{header}
 				<form onSubmit={this.handleSubmit} className="gateway-form">
-					{location}
-					{full_name}
-					{account_type}
-					{routing_number}
-					{first_name}
-					{last_name}
-					{birthdate}
-					{ssn}
-					{address}
-					{city}
-					{territory}
-					{postal_code}
+					<div className="gateway-box">
+						<div className="flexform">
+							{location}
+							{full_name}
+							{account_type}
+							{routing_number}
+						</div>
+						<div className="flexform">
+							{first_name}
+							{last_name}
+							{birthdate}
+							{ssn}
+							{address}
+							{city}
+							{territory}
+							{postal_code}
+						</div>
+					</div>
 					<input type="submit" value={this.props.formType} />
 				</form>
 			</div>

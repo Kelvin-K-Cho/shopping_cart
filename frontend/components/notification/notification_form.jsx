@@ -45,7 +45,7 @@ class NotificationForm extends React.Component {
 		let header = <h1>Notification Preferences</h1>;
 		let option = (
 			<label>
-				How would you like to be notified of purchase?
+				How would you like to be notified of purchase?: &nbsp;
 				<input
 					type="text"
 					value={this.state.option}
@@ -55,7 +55,7 @@ class NotificationForm extends React.Component {
 		);
 		let info = (
 			<label>
-				Contact Information
+				Contact Information: &nbsp;
 				<input
 					type="text"
 					value={this.state.info}
@@ -65,7 +65,7 @@ class NotificationForm extends React.Component {
 		);
 		let time = (
 			<label>
-				What time each day woud you like to be notified of purchases
+				What time each day woud you like to be notified of purchases: &nbsp;
 				<input
 					type="text"
 					value={this.state.time}
@@ -78,9 +78,11 @@ class NotificationForm extends React.Component {
 			<div className="main">
 				{header}
 				<form onSubmit={this.handleSubmit} className="notification-form">
-					{option}
-					{info}
-					{time}
+					<div className="notification-box">
+						{option}
+						{info}
+						{time}
+					</div>
 					<input type="submit" value={this.props.formType} />
 				</form>
 			</div>

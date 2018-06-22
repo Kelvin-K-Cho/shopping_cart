@@ -8,7 +8,7 @@ class Preferences extends React.Component {
 	}
 
 	render() {
-		const { shops } = this.props;
+		const { shops, currentUser } = this.props;
 		let shopId;
 		for (let i = 0; i < shops.length; i++) {
 			if (shops[i].user_id === currentUser.id) {

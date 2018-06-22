@@ -65,7 +65,7 @@ class ShopForm extends React.Component {
 		let title = <h1>Shop Preferences</h1>;
 		let name = (
 			<label>
-				Shop Name
+				Shop Name: &nbsp;
 				<input
 					type="text"
 					value={this.state.name}
@@ -75,7 +75,7 @@ class ShopForm extends React.Component {
 		);
 		let category = (
 			<label>
-				Shop Type
+				Shop Type: &nbsp;
 				<input
 					type="text"
 					value={this.state.category}
@@ -85,7 +85,7 @@ class ShopForm extends React.Component {
 		);
 		let territory = (
 			<label>
-				Shop State
+				Shop State: &nbsp;
 				<input
 					type="text"
 					value={this.state.state}
@@ -95,7 +95,7 @@ class ShopForm extends React.Component {
 		);
 		let city = (
 			<label>
-				Shop City
+				Shop City: &nbsp;
 				<input
 					type="text"
 					value={this.state.city}
@@ -107,11 +107,17 @@ class ShopForm extends React.Component {
 		return (
 			<div className="main">
 				{title}
-				<form onSubmit={this.handleSubmit} className="shop-form">
-					{name}
-					{category}
-					{territory}
-					{city}
+				<form onSubmit={this.handleSubmit} className="shopping-form">
+					<div className="shopping-box">
+						<div className="flexform">
+							{name}
+							{territory}
+						</div>
+						<div className="flexform">
+							{category}
+							{city}
+						</div>
+					</div>
 					<input type="submit" value={this.props.formType} />
 				</form>
 			</div>

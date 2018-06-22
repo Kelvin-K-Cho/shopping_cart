@@ -78,7 +78,7 @@ class ListingForm extends React.Component {
 		let details = <div>Details</div>;
 		let title = (
 			<label>
-				Title:
+				Title:&nbsp;
 				<input
 					type="text"
 					value={this.state.title}
@@ -88,7 +88,7 @@ class ListingForm extends React.Component {
 		);
 		let category = (
 			<label>
-				Category:
+				Category:&nbsp;
 				<input
 					type="text"
 					value={this.state.category}
@@ -98,8 +98,8 @@ class ListingForm extends React.Component {
 		);
 		let description = (
 			<label>
-				Description:
-				<input
+				Description:&nbsp;
+				<textarea
 					type="text"
 					value={this.state.description}
 					onChange={this.updateForm('description')}
@@ -108,7 +108,7 @@ class ListingForm extends React.Component {
 		);
 		let tags = (
 			<label>
-				Tags:
+				Tags:&nbsp;
 				<input
 					type="text"
 					value={this.state.tags}
@@ -118,7 +118,7 @@ class ListingForm extends React.Component {
 		);
 		let price = (
 			<label>
-				Price:
+				Price:&nbsp;
 				<input
 					type="number"
 					value={this.state.price}
@@ -128,7 +128,7 @@ class ListingForm extends React.Component {
 		);
 		let shipping = (
 			<label>
-				Shipping Cost:
+				Shipping Cost:&nbsp;
 				<input
 					type="number"
 					value={this.state.shipping}
@@ -138,7 +138,7 @@ class ListingForm extends React.Component {
 		);
 		let time = (
 			<label>
-				Processing Time:
+				Processing Time:&nbsp;
 				<input
 					type="text"
 					value={this.state.time}
@@ -148,7 +148,7 @@ class ListingForm extends React.Component {
 		);
 		let weight = (
 			<label>
-				Item Weight:
+				Item Weight:&nbsp;
 				<input
 					type="text"
 					value={this.state.weight}
@@ -190,18 +190,28 @@ class ListingForm extends React.Component {
 				{header}
 				{information}
 				<form onSubmit={this.handleSubmit} className="listing-form">
-					{title}
-					{category}
-					{description}
-					{tags}
-					{price}
-					{shipping}
-					{time}
-					{weight}
-					{size}
-					{length}
-					{width}
-					{height}
+					<div className="listing-box">
+						<div className="flexform">
+							<h4>Details</h4>
+							{title}
+							{category}
+							{description}
+							{tags}
+						</div>
+						<div className="flexform">
+							<h4>Pricing:</h4>
+							{price}
+						</div>
+						<div className="flexform">
+							{shipping}
+							{time}
+							{weight}
+							{size}
+							{length}
+							{width}
+							{height}
+						</div>
+					</div>
 					<input type="submit" value={this.props.formType} />
 				</form>
 			</div>

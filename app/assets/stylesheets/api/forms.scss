@@ -25,3 +25,98 @@
 		justify-content: space-around;
 	}
 }
+
+.shopping-form {
+	.shopping-box {
+		height: 20vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+		label {
+			padding: 0 5vw;
+		}
+	}
+
+	input[type='submit'] {
+		margin-left: 35vw;
+	}
+}
+
+.listing-form {
+	textarea {
+		display: block;
+		resize: none;
+		height: 8vh;
+		width: 100%;
+	}
+	h4 {
+		padding-top: 10px;
+	}
+
+	.listing-box {
+		margin-top: 20px;
+		height: 40vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+	.flexform {
+		margin: 2vh 3vw;
+		border: 2px solid black;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+
+		label {
+			padding: 10px;
+		}
+	}
+
+	input[type='submit'] {
+		margin-top: 6vh;
+		margin-left: 52vw;
+	}
+}
+
+.gateway-form {
+	.gateway-box {
+		height: 40vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+	.flexform {
+		margin: 2vh 3vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flexform:first-child {
+		margin-top: -15vh;
+	}
+
+	input[type='submit'] {
+		margin-top: 6vh;
+		margin-left: 35vw;
+	}
+}
+
+.notification-form {
+	.notification-box {
+		height: 30vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	input[type='submit'] {
+		margin-left: 28vw;
+	}
+}

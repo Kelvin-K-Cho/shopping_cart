@@ -9,9 +9,6 @@ class Progress extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.path);
-		console.log(this.state.vendor);
-
 		let place = this.props.path.slice(8);
 
 		for (let i = 0; i < place.length; i++) {
@@ -20,12 +17,10 @@ class Progress extends React.Component {
 			}
 		}
 
-		console.log(place);
-
 		let index = this.state.vendor.indexOf(place);
 
-		console.log(index);
-		return (
+		let emptyPortal = <div />;
+		let vendorPortal = (
 			<div className="checkout-wrap">
 				<ul className="checkout-bar">
 					<li className={index === 0 ? 'active' : index > 0 ? 'visited' : ''}>
@@ -46,6 +41,12 @@ class Progress extends React.Component {
 				</ul>
 			</div>
 		);
+
+		if (index === -1) {
+			return emptyPortal;
+		} else {
+			return vendorPortal;
+		}
 	}
 }
 
