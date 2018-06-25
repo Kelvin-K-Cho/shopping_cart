@@ -163,7 +163,7 @@ class ListingForm extends React.Component {
 					type="text"
 					value={this.state.length}
 					onChange={this.updateForm('length')}
-				/>
+				/>&nbsp;length
 			</label>
 		);
 		let width = (
@@ -172,7 +172,7 @@ class ListingForm extends React.Component {
 					type="text"
 					value={this.state.width}
 					onChange={this.updateForm('width')}
-				/>
+				/>&nbsp;width
 			</label>
 		);
 		let height = (
@@ -181,7 +181,7 @@ class ListingForm extends React.Component {
 					type="text"
 					value={this.state.height}
 					onChange={this.updateForm('height')}
-				/>
+				/>&nbsp;height
 			</label>
 		);
 

@@ -47,10 +47,17 @@ class NotificationForm extends React.Component {
 			<label>
 				How would you like to be notified of purchase?: &nbsp;
 				<input
-					type="text"
-					value={this.state.option}
+					type="checkbox"
+					value={'e-mail'}
 					onChange={this.updateForm('option')}
-				/>
+				/>&nbsp;
+				<span>e-mail</span>
+				<input
+					type="checkbox"
+					value={'phone call'}
+					onChange={this.updateForm('option')}
+				/>&nbsp;
+				<span>phone call</span>
 			</label>
 		);
 		let info = (
