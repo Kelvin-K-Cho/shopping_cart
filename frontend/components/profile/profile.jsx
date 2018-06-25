@@ -44,7 +44,7 @@ class Profile extends React.Component {
 		event.preventDefault();
 		this.props
 			.action(this.state)
-			.then(() => this.props.history.push('/preferences/'));
+			.then(() => this.props.history.push('/customer/photos/'));
 	}
 
 	onChange(date) {

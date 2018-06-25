@@ -5,7 +5,7 @@ class Progress extends React.Component {
 		super(props);
 		this.state = {
 			vendor: ['shop', 'listing', 'gateway', 'notification'],
-			customer: ['payment', 'photos', 'profile']
+			customer: ['profile', 'photos', 'payment']
 		};
 	}
 
@@ -59,7 +59,7 @@ class Progress extends React.Component {
 					<li
 						className={element === 0 ? 'active' : element > 0 ? 'visited' : ''}
 					>
-						Billing/Payment
+						Your Profile
 					</li>
 
 					<li
@@ -68,7 +68,7 @@ class Progress extends React.Component {
 						Your Photos
 					</li>
 
-					<li className={element === 2 ? 'active3' : ''}>Your Profile</li>
+					<li className={element === 2 ? 'active3' : ''}>Billing/Payment</li>
 				</ul>
 			</div>
 		);

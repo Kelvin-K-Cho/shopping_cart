@@ -47,7 +47,7 @@ class PaymentForm extends React.Component {
 		event.preventDefault();
 		this.props
 			.action(this.state)
-			.then(() => this.props.history.push('/customer/photos/'));
+			.then(() => this.props.history.push('/preferences/'));
 		// const { notifications } = this.props;
 		// let notificationId;
 		// for (let i = 0; i < notifications.length; i++) {
@@ -69,7 +69,7 @@ class PaymentForm extends React.Component {
 		// }
 		// this.props
 		// 	.action(this.state)
-		// 	.then(() => this.props.history.push('/preferences/'));
+		// .then(() => this.props.history.push('/preferences/'));
 	}
 
 	render() {

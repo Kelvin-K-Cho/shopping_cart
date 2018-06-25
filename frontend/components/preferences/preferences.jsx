@@ -4,11 +4,11 @@ import Loader from '../loader/loader';
 
 class Preferences extends React.Component {
 	componentDidMount() {
-		this.props.fetchShops().then(() => this.props.fetchGateways());
+		this.props.fetchShops().then(() => this.props.fetchProfiles());
 	}
 
 	render() {
-		const { shops, gateways, currentUser } = this.props;
+		const { shops, profiles, currentUser } = this.props;
 		let shopId;
 		for (let i = 0; i < shops.length; i++) {
 			if (shops[i].user_id === currentUser.id) {
@@ -16,11 +16,11 @@ class Preferences extends React.Component {
 				break;
 			}
 		}
-		let gatewayId;
-		if (gateways) {
-			for (let i = 0; i < gateways.length; i++) {
-				if (gateways[i].user_id === currentUser.id) {
-					gatewayId = gateways[i].id;
+		let profileId;
+		if (profiles) {
+			for (let i = 0; i < profiles.length; i++) {
+				if (profiles[i].user_id === currentUser.id) {
+					profileId = profiles[i].id;
 					break;
 				}
 			}
@@ -33,10 +33,10 @@ class Preferences extends React.Component {
 			vendor = <Link to="/vendor/shop/new">Vendor</Link>;
 		}
 		let customer;
-		if (gatewayId) {
-			customer = <Link to={`/customer/payment/${gatewayId}`}>Customer</Link>;
+		if (profileId) {
+			customer = <Link to={`/customer/profile/${profileId}`}>Customer</Link>;
 		} else {
-			customer = <Link to="/customer/payment/new">Customer</Link>;
+			customer = <Link to="/customer/profile/new">Customer</Link>;
 		}
 		return (
 			<div className="main">

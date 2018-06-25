@@ -19,7 +19,7 @@ class Sync extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.fetchProfiles();
+		this.props.fetchGateways();
 	}
 
 	handleChange(key, event) {
@@ -28,18 +28,18 @@ class Sync extends React.Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		const { profiles } = this.props;
-		let profileId;
-		for (let i = 0; i < profiles.length; i++) {
-			if (profiles[i].user_id === currentUser.id) {
-				profileId = profiles[i].id;
+		const { gateways } = this.props;
+		let gatewayId;
+		for (let i = 0; i < gateways.length; i++) {
+			if (gateways[i].user_id === currentUser.id) {
+				gatewayId = gateways[i].id;
 				break;
 			}
 		}
-		if (profileId) {
-			this.props.history.push(`/customer/profile/${profileId}`);
+		if (gatewayId) {
+			this.props.history.push(`/customer/payment/${gatewayId}`);
 		} else {
-			this.props.history.push(`/customer/profile/new`);
+			this.props.history.push(`/customer/payment/new`);
 		}
 	}
 

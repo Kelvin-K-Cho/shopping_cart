@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import Sync from './sync';
-import { fetchProfiles } from '../../actions/profiles';
-import { selectProfiles } from '../../reducers/selectors';
+import { fetchGateways } from '../../actions/gateways';
+import { selectGateways } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
-	profiles: selectProfiles(state)
+	gateways: selectGateways(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-	fetchProfiles: () => dispatch(fetchProfiles())
+	fetchGateways: () => dispatch(fetchGateways())
 });
 
 const SyncContainer = connect(
