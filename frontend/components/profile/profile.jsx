@@ -1,8 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import Calendar from 'react-calendar/dist/entry.nostyle';
-import moment from 'moment';
-import DatePicker from 'react-datepicker';
 
 class Profile extends React.Component {
 	constructor(props) {
@@ -97,6 +95,13 @@ class Profile extends React.Component {
 			</label>
 		);
 
+		let date = (
+			<div>
+				<div>DOB:</div>
+				<Calendar onChange={this.onChange} value={this.state.date} />
+			</div>
+		);
+
 		return (
 			<div className="main">
 				{header}
@@ -108,10 +113,7 @@ class Profile extends React.Component {
 							{territory}
 							{city}
 						</div>
-						<div>
-							<div>DOB:</div>
-							<Calendar onChange={this.onChange} value={this.state.date} />
-						</div>
+						{date}
 					</div>
 					<input type="submit" value={this.props.formType} />
 				</form>
