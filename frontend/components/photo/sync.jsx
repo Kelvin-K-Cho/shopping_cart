@@ -50,43 +50,47 @@ class Sync extends React.Component {
 				<div className="labels" id="facebook-label">
 					Facebook
 				</div>
-				<Toggle
-					id="facebook-toggle"
-					defaultChecked={this.state.facebook}
-					onChange={this.handleFacebook}
-				/>
+				<input type="file" onChange={this.handleFacebook} />
 			</div>
 		);
+		// <Toggle
+		// 	id="facebook-toggle"
+		// 	defaultChecked={this.state.facebook}
+		// 	onChange={this.handleFacebook}
+		// />
 		let instagram = (
 			<div className="instagram">
 				<div className="labels">Instagram</div>
-				<Toggle
-					id="instagram-toggle"
-					defaultChecked={this.state.instagram}
-					onChange={this.handleInstagram}
-				/>
+				<input type="file" onChange={this.handleInstagram} />
 			</div>
 		);
+		// <Toggle
+		// 	id="instagram-toggle"
+		// 	defaultChecked={this.state.instagram}
+		// 	onChange={this.handleInstagram}
+		// />
 		let icloud = (
 			<div className="icloud">
 				<div className="labels">iCloud</div>
-				<Toggle
-					id="icloud-toggle"
-					defaultChecked={this.state.icloud}
-					onChange={this.handleIcloud}
-				/>
+				<input type="file" onChange={this.handleIcloud} />
 			</div>
 		);
+		// <Toggle
+		// 	id="icloud-toggle"
+		// 	defaultChecked={this.state.icloud}
+		// 	onChange={this.handleIcloud}
+		// />
 		let computer = (
 			<div className="computer">
 				<div className="labels">Computer</div>
-				<Toggle
-					id="computer-toggle"
-					defaultChecked={this.state.computer}
-					onChange={this.handleComputer}
-				/>
+				<input type="file" onChange={this.handleComputer} />
 			</div>
 		);
+		// <Toggle
+		// 	id="computer-toggle"
+		// 	defaultChecked={this.state.computer}
+		// 	onChange={this.handleComputer}
+		// />
 		let manage = (
 			<label>
 				<div>Manage</div> <textarea />

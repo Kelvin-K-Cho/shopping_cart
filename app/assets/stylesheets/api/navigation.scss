@@ -7,7 +7,7 @@ header {
 	display: flex;
 	flex-direction: row-reverse;
 	height: 6vh;
-	background-color: #0a4d66;
+	background-color: $primary_color;
 	padding: 0.5vh 1vw;
 
 	img {
@@ -44,6 +44,14 @@ header {
 	button:active {
 		background-color: white;
 	}
+}
+
+#vendor {
+	background-color: #0a4d66;
+}
+
+#custom {
+	background-color: #acb0db;
 }
 
 .btn {

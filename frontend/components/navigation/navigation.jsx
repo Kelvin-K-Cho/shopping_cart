@@ -52,7 +52,18 @@ class Navigation extends React.Component {
 				);
 			}
 		}
-		let display = <Navbar>{link}</Navbar>;
+
+		let portal = path.slice(1, 7);
+
+		let display;
+
+		if (portal === 'vendor') {
+			display = <Navbar id="vendor">{link}</Navbar>;
+		} else if (portal === 'custom') {
+			display = <Navbar id="custom">{link}</Navbar>;
+		} else {
+			display = <Navbar>{link}</Navbar>;
+		}
 		return display;
 	}
 }

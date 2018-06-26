@@ -23,7 +23,7 @@
 	);
 }
 
-@mixin blue-stripe {
+@mixin before-stripe {
 	background-size: 35px 35px;
 	background-color: #d0cdd7;
 	background-image: -webkit-linear-gradient(
@@ -48,9 +48,109 @@
 	);
 }
 
-@mixin green-stripe {
+@mixin after-stripe {
 	background-size: 35px 35px;
 	background-color: #acb0db;
+	background-image: -webkit-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-image: -moz-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+@mixin prior-stripe {
+	background-size: 35px 35px;
+	background-color: #0a4d66;
+	background-image: -webkit-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-image: -moz-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+@mixin post-stripe {
+	background-size: 35px 35px;
+	background-color: #d0cdd7;
+	background-image: -webkit-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-image: -moz-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+@mixin blue-stripe {
+	background-size: 35px 35px;
+	background-color: #57aed1;
+	background-image: -webkit-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-image: -moz-linear-gradient(
+		-45deg,
+		rgba(255, 255, 255, 0.2) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.2) 50%,
+		rgba(255, 255, 255, 0.2) 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+@mixin green-stripe {
+	background-size: 35px 35px;
+	background-color: #8bc53f;
 	background-image: -webkit-linear-gradient(
 		-45deg,
 		rgba(255, 255, 255, 0.2) 25%,
@@ -205,7 +305,7 @@ ul.checkout-bar {
 @media all and (min-width: 800px) {
 	.checkout-bar li.active:after {
 		-webkit-animation: myanimation 3s 0;
-		@include green-stripe;
+		@include after-stripe;
 		@include inner-shadow;
 		content: '';
 		height: 15px;
@@ -218,7 +318,7 @@ ul.checkout-bar {
 	}
 	.checkout-bar li.active2:after {
 		-webkit-animation: myanimation 3s 0;
-		@include green-stripe;
+		@include after-stripe;
 		@include inner-shadow;
 		content: '';
 		height: 15px;
@@ -231,7 +331,7 @@ ul.checkout-bar {
 	}
 	.checkout-bar li.active3:after {
 		-webkit-animation: myanimation 3s 0;
-		@include green-stripe;
+		@include after-stripe;
 		@include inner-shadow;
 		content: '';
 		height: 15px;
@@ -255,7 +355,7 @@ ul.checkout-bar {
 		position: absolute;
 		width: 100%;
 		&:before {
-			@include blue-stripe;
+			@include before-stripe;
 			@include inner-shadow;
 			border-radius: 15px;
 			content: ' ';
@@ -282,7 +382,7 @@ ul.checkout-bar {
 			&.visited {
 				background: none;
 				&:after {
-					@include blue-stripe;
+					@include before-stripe;
 					@include inner-shadow;
 					content: '';
 					height: 15px;
@@ -298,6 +398,25 @@ ul.checkout-bar {
 	#customer {
 		&:before {
 			width: 30%;
+			@include prior-stripe;
+		}
+		li.active:after {
+			@include post-stripe;
+		}
+		li.active2:after {
+			@include post-stripe;
+		}
+		li.active3:after {
+			@include post-stripe;
+		}
+		li {
+			&:before {
+			}
+			&.visited {
+				&:after {
+					@include prior-stripe;
+				}
+			}
 		}
 	}
 }
