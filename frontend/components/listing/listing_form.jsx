@@ -128,7 +128,7 @@ class ListingForm extends React.Component {
 		);
 		let shipping = (
 			<label>
-				Shipping Cost:&nbsp; $
+				Shipping Cost:&nbsp; $ &nbsp;
 				<input
 					type="number"
 					value={this.state.shipping}

@@ -231,26 +231,26 @@ ul.checkout-bar {
 			z-index: 999;
 		}
 		&.active {
-			color: #8bc53f;
+			color: #0a4d66;
 			// font-weight: bold;
 			&:before {
-				background: #8bc53f;
+				background: #0a4d66;
 				z-index: 99999;
 			}
 		}
 		&.active2 {
-			color: #8bc53f;
+			color: #0a4d66;
 			// font-weight: bold;
 			&:before {
-				background: #8bc53f;
+				background: #0a4d66;
 				z-index: 99999;
 			}
 		}
 		&.active3 {
-			color: #8bc53f;
+			color: #0a4d66;
 			// font-weight: bold;
 			&:before {
-				background: #8bc53f;
+				background: #0a4d66;
 				z-index: 99999;
 			}
 		}
@@ -411,6 +411,24 @@ ul.checkout-bar {
 		}
 		li {
 			&:before {
+			}
+			&.active {
+				color: #8bc53f;
+				&:before {
+					background: #8bc53f;
+				}
+			}
+			&.active2 {
+				color: #8bc53f;
+				&:before {
+					background: #8bc53f;
+				}
+			}
+			&.active3 {
+				color: #8bc53f;
+				&:before {
+					background: #8bc53f;
+				}
 			}
 			&.visited {
 				&:after {

@@ -44,6 +44,11 @@
 		}
 	}
 
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
+	}
+
 	input[type='submit'] {
 		margin-left: 45vw;
 	}
@@ -73,7 +78,7 @@
 	.flexform {
 		font-size: 1rem;
 		margin: 2vh 3vw;
-		border: 2px solid black;
+		border: 1px solid black;
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
@@ -82,6 +87,11 @@
 			text-align: left;
 			padding: 10px;
 		}
+	}
+
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
 	}
 
 	input[type='submit'] {
@@ -111,6 +121,11 @@
 		margin-top: -15vh;
 	}
 
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
+	}
+
 	input[type='submit'] {
 		margin-top: 6vh;
 		margin-left: 45vw;
@@ -124,6 +139,11 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
+	}
+
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
 	}
 
 	input[type='checkbox'] {
@@ -153,12 +173,18 @@
 	}
 
 	.labels {
-		margin: 15px;
+		margin: 1.5vw;
 	}
 
 	textarea {
 		height: 20vh;
 		width: 20vw;
+		border-radius: 30px;
+	}
+
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
 	}
 
 	input[type='submit'] {
@@ -186,14 +212,23 @@
 		width: 20vw;
 	}
 
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
+	}
+
 	input[type='submit'] {
 		margin-top: 10vh;
 	}
+}
 
-	input[type='file'] {
-		opacity: 0;
-		visibility: hidden;
-		display: none;
-		color: transparent;
+.labels {
+	display: inline;
+}
+
+.main {
+	input {
+		border-radius: 25px;
+		padding: 0.5vh 0.5vw;
 	}
 }

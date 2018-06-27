@@ -1,6 +1,9 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import Calendar from 'react-calendar/dist/entry.nostyle';
+import moment from 'moment';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 class Profile extends React.Component {
 	constructor(props) {
@@ -13,10 +16,12 @@ class Profile extends React.Component {
 			dob: '',
 			twenty_one: '',
 			date: new Date()
+			// date: moment()
 		};
 		this.updateForm = this.updateForm.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.onChange = this.onChange.bind(this);
+		// this.handleChange = this.handleChange.bind(this);
 	}
 
 	componentDidMount() {
@@ -50,6 +55,12 @@ class Profile extends React.Component {
 	onChange(date) {
 		this.setState({ date });
 	}
+
+	// handleChange(date) {
+	// 	this.setState({
+	// 		startDate: date
+	// 	});
+	// }
 
 	render() {
 		let header = <h1>Your Profile</h1>;
@@ -101,6 +112,13 @@ class Profile extends React.Component {
 				<Calendar onChange={this.onChange} value={this.state.date} />
 			</div>
 		);
+
+		// let date = (
+		// 	<div>
+		// 		<div>DOB:</div>
+		// 		<DatePicker selected={this.state.date} onChange={this.onChange} />
+		// 	</div>
+		// );
 
 		return (
 			<div className="main">

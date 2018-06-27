@@ -71,7 +71,7 @@ class Sync extends React.Component {
 		// />
 		let icloud = (
 			<div className="icloud">
-				<div className="labels">iCloud</div>
+				<div className="labels">iCloud</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<input type="file" onChange={this.handleIcloud} />
 			</div>
 		);
